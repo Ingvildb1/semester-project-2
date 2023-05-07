@@ -1,0 +1,22 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+
+body {
+    background-image: url("/img/cover.jpg");
+    background-size: cover;
+  }
+
+  .nav-link {
+    color: white;
+    
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  
+
+  
