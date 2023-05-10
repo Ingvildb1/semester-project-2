@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name = "description" content = "Welcome to BidBlitz! An auction site for noroff students">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Montserrat&family=Playfair+Display:wght@400;800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/styles.css">
     <title>BidBlitz | Listings</title>
 </head>
-<body>
+<body class="listings-body">
     <header>
         <nav class="navbar navbar-expand-md">
             <div class="container">
@@ -18,10 +21,10 @@
         
                 <div class="collapse navbar-collapse" id="navmenu">
                     <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="pages/listings.html">Listings</a></li>
-                            <li class="nav-item"><a class="nav-link" href="pages/login.html">Log In</a></li>
-                            <li class="nav-item"><a class="nav-link" href="pages/profile.html">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link nav-brown" href="/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link nav-brown" href="/pages/listings.html">Listings</a></li>
+                        <li class="nav-item"><a class="nav-link nav-brown" href="/pages/login.html">Log In</a></li>
+                        <li class="nav-item"><a class="nav-link nav-brown" href="/pages/profile.html">Profile</a></li>
                     </ul>
                 </div>
             </div>
@@ -29,12 +32,27 @@
            </nav>
     </header>
 
-    <main>
+    <main class="text-center">
+        <h1 class="listings-header">Items to bid on right now</h1>
 
+        <section class="listing-group popular">
+            <h3 class="text-center my-3">Popular auctions</h2>
+            <div class="pop-container bg-primary mx-auto "><div class = "loader"></div></div>
+          </section>
+          <section class="listing-group latest">
+            <h3 class="text-center my-3">Latest auctions</h2>
+            <div class="pop-container bg-primary mx-auto "><div class = "loader"></div></div>
+          </section>
+          <section class="listing-group ending">
+            <h3 class="text-center my-3">Last chance auctions</h2>
+            <div class="pop-container bg-primary mx-auto "><div class = "loader"></div></div>
+          </section>
     </main>
     
-    <footer>
+    <footer class="footer mt-auto py-5 col-md-12 justify-content-center my-5 pt-5 text-center text-small">
         <p>&copy; 2023 BidBlitz. All rights reserved.</p>
     </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
