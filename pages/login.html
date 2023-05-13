@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/dist/css/styles.css">
     <title>BidBlitz | Login</title>
 </head>
-<body>
+<body class="background-body">
     <header>
         <nav class="navbar navbar-expand-md">
             <div class="container">
@@ -32,7 +32,46 @@
            </nav>
     </header>
 
-    <main>
+    <main class = "login-container">
+        <h1 class="text-center my-3 title">Log in</h1>
+        <p class="status fs-4 text-center"></p>
+        <form class="w-75 mx-auto" id="login">
+          <div class="email my-3">
+            <label for="email" class="form-label">Email:</label>
+            <input id="email" type="email" class="form-control" name="email" placeholder="example@stud.noroff.no" />
+            <div id="emailError" class="form-text hidden text-danger">
+              Registration requires a "@stud.noroff.no" Email
+            </div>
+            <div id="loginError" class="form-text hidden text-danger">Log in requires a "@stud.noroff.no" Email</div>
+          </div>
+          <div class="pass my-3">
+            <label for="password" class="form-label">Password:</label>
+            <input id="password" type="password" name="password" class="form-control" placeholder="*******" />
+            <div id="passwordError" class="form-text hidden text-danger">
+              Your password must be at least 8 characters long
+            </div>
+          </div>
+          <div class="pass-confirm my-3 hidden">
+            <label for="password-confirm" class="form-label">Confirm Password:</label>
+            <input id="password-confirm" type="password" class="form-control" placeholder="*******" />
+            <div id="confirmError" class="form-text hidden text-danger">Passwords don't match</div>
+          </div>
+          <div class="username my-3 hidden">
+            <label for="username" class="form-label">Username:</label>
+            <input id="username" type="text" name="name" class="form-control" placeholder="Auctionuser98" />
+            <div id="usernameError" class="hidden form-text text-danger">Please enter a username</div>
+          </div>
+          <div class="avatar my-3 hidden">
+            <label for="avatar" class="form-controll">Avatar(Optional):</label>
+            <input id="avatar" type="url" class="form-control" name="avatar" placeholder="www.linkToHosted.image" />
+          </div>
+          <button id="login-button" type="submit" class="btn w-100 my-1" data-action="login">Log in</button>
+          <button id="register-button" class="btn btn-secondary w-100 my-1" data-action="register-open">Register</button>
+          <button id="submit-button" class="btn w-100 my-1 hidden" data-action="register-send">Submit</button>
+          <button id="back-button" class="btn btn-secondary w-100 my-1 hidden" data-action="close-register">
+            Close registration
+          </button>
+        </form>
 
     </main>
     
