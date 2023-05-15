@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../dist/css/styles.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name = "description" content = "Welcome to BidBlitz! An auction site for noroff students">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Montserrat&family=Playfair+Display:wght@400;800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/css/styles.css">
     <title>BidBlitz | Profile</title>
 </head>
 <body>
@@ -33,6 +33,52 @@
     </header>
 
     <main>
+        <div class = "profile-container">
+            <div class="loader my-5 mx-auto"></div>
+          </div>
+          <div class="profile-divider status-container">
+            <hr>
+          </div>
+          <div class = "content-container profile-cards d-flex flex-wrap justify-content-center">
+            <div class="loader my-5"></div>
+          </div>
+        </main>
+        <div class = "position-fixed bottom-1 start-84 ratio ratio-1x1 w-10 hidden new-listing-button" data-bs-toggle="tooltip" data-bs-title = "Create a new listing" data-bs-placement="left">
+          <button type = "button" class = "material-symbols-outlined btn text-center btn-info rounded-circle" data-bs-toggle="modal" data-bs-target="#new-listing">add</button>
+        </div>
+        <div class="modal fade" id="new-listing" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-title">Create a new listing</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form class = "new-listing-form">
+                  <label for = "title" class = "form-label">Title</label>
+                  <input id = "title" class = "form-control" type = "text">
+                  <div id="title-status-message" class="form-text fs-5 hidden"></div>
+    
+                  <label for = "description" class = "form-label">Description</label>
+                  <textarea id = "description" class = "form-control" type = "text"></textarea>
+    
+                  <label for = "tags" class = "form-label">Tags(Separate with comma example: "Art, Cars, Bikes"):</label>
+                  <input id = "tags" class = "form-control" type = "text">
+    
+                  <label for = "media" class = "form-label">Images(Separate with comma example: "url1, url2, url3"):</label>
+                  <input id = "media" class = "form-control" type = "url">
+    
+                  <label for = "end-date" class = "form-label">Ending date</label>
+                  <input id = "end-date" class = "form-control" type = "datetime-local">
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" id = "new-listing-button" class="btn btn-primary">Post listing</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
     </main>
     
@@ -40,6 +86,6 @@
         <p>&copy; 2023 BidBlitz. All rights reserved.</p>
     </footer>
 
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
