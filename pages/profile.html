@@ -11,26 +11,63 @@
     <link href="https://fonts.googleapis.com/css2?family=Bayon&family=Montserrat&family=Playfair+Display:wght@400;800&family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <title>BidBlitz | Profile</title>
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-md">
-            <div class="container">
-                <a href="/index.html" class="navbar-brand">BidBlitz</a>
-        
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
-        
-                <div class="collapse navbar-collapse" id="navmenu">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/pages/listings.html">Listings</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/pages/login.html">Log In</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/pages/profile.html">Profile</a></li>
-                    </ul>
-                </div>
+<body class="background-body">
+    <header class="p-3 ">
+        <a href="/index.html" class="navbar-brand text-dark">BidBlitz</a>
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-center lg-w-50">
+            <div class="dropdown col-3">
+              <button
+                class="dropdown-toggle btn"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="material-symbols-outlined" id="menu"> menu </span>
+              </button>
+              <ul
+                class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 dropdown-menu hidden"
+                id="menu-list"
+              >
+                <li><a href="/index.html" class="nav-link px-2 text-primary dropdown-item">Home</a></li>
+                <li><a href="/pages/listings.html" class="nav-link px-2 text-secondary dropdown-item">Listings</a></li>
+                <li><a href="/pages/profile.html" class="nav-link px-2 text-secondary hidden dropdown-item">Profile</a></li>
+              </ul>
             </div>
-           
-           </nav>
-    </header>
+            <form class="col-6" role="search">
+              <input
+                type="search"
+                class="form-control form-control-dark text-bg-light"
+                placeholder="Search..."
+                aria-label="Search"
+                id="search"
+              />
+            </form>
+            <div class="text-end col-3">
+              <div class="login-buttons">
+                <a href="/pages/login.html" type="button" class="btn btn-outline-dark">Login</a>
+                <a href="/pages/login.html?page=register" type="button" class="btn btn-danger hidden" id = "register">Sign-up</a>
+              </div>
+              <div class="user hidden justify-content-end">
+                <div class="dropdown">
+                  <a class="dropdown-toggle dropdown-profile" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="" alt="Profile picture" class="hidden profile-picture rounded-circle md-w-50" />
+                  </a>
+                  <ul class="dropdown-menu py-0 profile-dropdown">
+                    <div class="bg-primary rounded-top">
+                      <li>
+                        <span class="dropdown-item disabled text-dark">Credits:</span>
+                      </li>
+                      <li><span class="dropdown-item credits-container disabled text-dark"></span></li>
+                    </div>
+                    <li><span class="dropdown-item" id="log-out">Log Out</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
 
     <main>
         <div class = "profile-container">
@@ -40,11 +77,10 @@
             <hr>
           </div>
           <div class = "content-container profile-cards d-flex flex-wrap justify-content-center">
-            <div class="loader my-5"></div>
           </div>
         </main>
         <div class = "position-fixed bottom-1 start-84 ratio ratio-1x1 w-10 hidden new-listing-button" data-bs-toggle="tooltip" data-bs-title = "Create a new listing" data-bs-placement="left">
-          <button type = "button" class = "material-symbols-outlined btn text-center btn-info rounded-circle" data-bs-toggle="modal" data-bs-target="#new-listing">add</button>
+          <button type = "button" class = "material-symbols-outlined btn text-center btn-info bg-dark text-white" data-bs-toggle="modal" data-bs-target="#new-listing">Add Listing</button>
         </div>
         <div class="modal fade" id="new-listing" tabindex="-1" aria-hidden="true">
           <div class="modal-dialog">
@@ -86,6 +122,6 @@
         <p>&copy; 2023 BidBlitz. All rights reserved.</p>
     </footer>
 
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="../src/js/profile.mjs"></script>
 </body>
 </html>
