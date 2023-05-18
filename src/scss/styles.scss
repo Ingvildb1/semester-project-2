@@ -24,11 +24,14 @@ body {
     background: rgba(110, 83, 67, 0.345); // change this to any color and transparency level you want
     z-index: -1;
   }
-
+ 
   .nav-brown {
     color: #623E2A;
   }
   
+  .hidden {
+    display: none;
+  }
 
   .nav-white {
     color: white;
@@ -73,6 +76,10 @@ body {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .w-10{
+    width: 15%;
+    z-index: 100;
+  }
 
 
   // LISTINGS PAGE //
@@ -92,6 +99,52 @@ body {
     font-size: 15px;
     text-transform: uppercase;
   }
+  .listing {
+    min-width: 80%;
+    margin-inline: 1rem;
+    max-height: 70vh;
+    overflow: hidden;
+  }
+  .bids {
+    font-weight: bold;
+  }
+  .p-img {
+    max-height: 40vh;
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+  }
+  .unset{
+    all: unset;
+  }
+  .image-height-fix{
+    height: 40vh;
+    object-fit: cover;
+  }
+  .carousel-container {
+    position: relative;
+  }
+  .d-flex {
+    display: flex !important;
+}
+.overlay{
+  background-color: rgba(0, 0, 0, .4);
+}
+
+  // Specific page//
+  .p-img {
+    max-height: 80vh;
+    width: 50%;
+ justify-content: center;
+    margin-left: 20px;
+
+  }
+  .description {
+    background-color: #EFEBE5;
+    margin: 0;
+    margin-top: 10px;
+    padding: 60px;
+  }
 
 
   // Profile //
@@ -109,4 +162,37 @@ body {
     width: 5% !important;
     left: 79% !important;
   }
+  .profile-picture, .profile-image {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  .dropdown-profile{
+    width: 30% !important;
+  }
   
+  @include media-breakpoint-up(sm){
+    .listing{
+      min-width: 50%;
+    }
+    .new-listing-button{
+      width: 10%;
+      left: 89% !important;
+    }
+  }
+
+  @include media-breakpoint-up(xl){
+    .listing{
+      min-width: 20%;
+    }
+  }
+
+  @include media-breakpoint-up(xxl){
+    main{
+      width: 70%;
+      margin: 0 auto;
+    }
+    .new-listing-button{
+      width: 5% !important;
+      left: 79% !important;
+    }
+  }
