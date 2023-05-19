@@ -8,6 +8,11 @@ body {
     height: 100%;
     margin: 0;
   }
+  .navbar-brand {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
 
   .home-body {
     background-image: url("/img/cover.jpg");
@@ -41,6 +46,13 @@ body {
   ul {
     list-style: none;
   }
+  #menu {
+    display: inline-block;
+    padding: 10px 40px;
+    border: 1px solid black;
+    background-color: #f2f2f2;
+  }
+  
 
 .text-center {
   margin-top: 40px;
@@ -80,6 +92,7 @@ body {
     width: 15%;
     z-index: 100;
   }
+  
 
 
   // LISTINGS PAGE //
@@ -87,11 +100,14 @@ body {
   .background-body{
     background-color: #EFEBE5;
   }
-  .listings-header {
+  .header-listings {
     font-family: 'Playfair Display', serif;
-    font-size: 50px;
-    letter-spacing: 1px;
+    font-size: 60px;
+    letter-spacing: 2px;
     color: #623E2A;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
   }
 
   .listing-group h3 {
@@ -118,8 +134,8 @@ body {
     all: unset;
   }
   .image-height-fix{
-    height: 40vh;
-    object-fit: cover;
+    height: 60vh;
+    object-fit:cover;
   }
   .carousel-container {
     position: relative;
@@ -128,7 +144,7 @@ body {
     display: flex !important;
 }
 .overlay{
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(83, 58, 35, 0.4);
 }
 
   // Specific page//
@@ -175,14 +191,23 @@ body {
       min-width: 50%;
     }
     .new-listing-button{
-      width: 10%;
-      left: 89% !important;
+      width: 50px;
+      left: 89%;
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    .listing{
+      min-width: 30%;
+    }
+    .dropdown-profile{
+      width:30% !important;
     }
   }
 
   @include media-breakpoint-up(xl){
     .listing{
-      min-width: 20%;
+      min-width: 80%;
     }
   }
 
@@ -192,7 +217,7 @@ body {
       margin: 0 auto;
     }
     .new-listing-button{
-      width: 5% !important;
-      left: 79% !important;
+      width: 5%;
+      left: 79%;
     }
   }
