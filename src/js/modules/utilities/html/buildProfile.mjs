@@ -6,7 +6,7 @@ export async function buildProfile(data, edit){
 
   container.innerHTML = `
   <div class = "w-50 mx-auto m-3 profile-image-container position-relative ">
-    <img src = "${data.avatar}" class = "rounded-circle w-100 profile-image" alt = "User's profile image" onerror = "this.src = '/media/pexels-luis-del-río-15286.jpg'">
+    <img src = "${data.avatar}" class = "rounded-circle w-100 profile-image" alt = "User's profile image" onerror = "this.src = '/img/error.jpg'">
   </div>
   <div class = "w-100 text-center my-3">
     <h1>${data.name}</h1>
