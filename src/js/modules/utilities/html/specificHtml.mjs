@@ -19,7 +19,7 @@ export function specificHtml(data) {
     console.log(data);
     container.innerHTML = `
     <div class = "title">
-      <h1 class = "text-center">${data.title}</h1>
+      <h1 class = "text-center header-listings">${data.title}</h1>
     </div>
     <div class = "carousel-container ">
       <div id="carousel" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
@@ -112,7 +112,7 @@ export function specificHtml(data) {
         if (index === 0) {
           galleryContainer.innerHTML += `
           <div class="carousel-item active">
-            <img src=${e} class="d-block p-img mx-auto" alt = "the product on auction" onerror = "this.src = '/media/pexels-ekaterina-bolovtsova-6077326.jpg'"/>
+            <img src=${e} class="d-block p-img mx-auto" alt = "the product on auction" onerror = "this.src = '/img/error.jpg'"/>
           </div>
           `;
         } else {
