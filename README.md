@@ -1,6 +1,8 @@
 # Semester project 2
 Semester project 2.
 
+I have some issues to get the site on the hosted application, so please clone this to see the whole project.
+
 ## About this project
 
 Second year front end studies at Noroff. 
@@ -50,3 +52,15 @@ npm run build
 ```
 npm run server
 ```
+
+## **_Delivery links_**
+
+| Resource         | Url |
+|------------------|---------------|
+| Gantt Chart      | [Gantt Chart](https://github.com/Ingvildb1/semester-project-2/blob/main/img/Gantt%20Chart.jpg) |
+| Design prototype | [XD Prototype](https://xd.adobe.com/view/d4f39e7d-55ed-40cf-94ca-b883c705c210-81a0/) |
+| Style guide      | [XD Style Guide](https://xd.adobe.com/view/1f3f94c5-e265-4a3f-8282-bb05bf3a86c4-4a6c/)|
+| Kanban board     | [Github projects](https://trello.com/invite/b/2mni7GYq/ATTIf47d879b1afeac12390852c8c76e02f3C3BA214E/semester-project-2) |
+| Repository       | [Github](https://github.com/Ingvildb1/semester-project-2) |
+| Hosted demo      | [Github Pages](https://ingvildb1.github.io/semester-project-2/) |
+
