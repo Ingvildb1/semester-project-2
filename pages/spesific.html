@@ -1,89 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name = "description" content = "Welcome to BidBlitz! An auction site for noroff students">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js">
-    <link rel="stylesheet" href="/dist/css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Welcome to BidBlitz! An auction site for noroff students"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    />
+    <link rel="stylesheet" href="./dist/css/styles.css" />
     <title>BidBlitz | Listing Details</title>
-</head>
-<body class="background-body">
-    <header class="p-3 ">
-        <a href="/index.html" class="navbar-brand brand text-dark">BidBlitz</a>
-        <div class="container">
-          <div class="d-flex align-items-center justify-content-center lg-w-50">
-            <div class="dropdown col-3">
-              <button
-                class="dropdown-toggle btn"
+  </head>
+  <body class="background-body">
+    <header class="p-3">
+      <a href="/index.html" class="navbar-brand brand text-dark">BidBlitz</a>
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-center lg-w-50">
+          <div class="dropdown col-3">
+            <button
+              class="dropdown-toggle btn"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span class="material-symbols-outlined" id="menu"> menu </span>
+            </button>
+            <ul
+              class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 dropdown-menu hidden"
+              id="menu-list"
+            >
+              <li>
+                <a
+                  href="/index.html"
+                  class="nav-link px-2 text-primary dropdown-item"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/listings.html"
+                  class="nav-link px-2 text-secondary dropdown-item"
+                  >Listings</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pages/profile.html"
+                  class="nav-link px-2 text-secondary hidden dropdown-item"
+                  >Profile</a
+                >
+              </li>
+            </ul>
+          </div>
+          <form class="col-4" role="search">
+            <input
+              type="search"
+              class="form-control form-control-dark text-bg-light"
+              placeholder="Search..."
+              aria-label="Search"
+              id="search"
+            />
+          </form>
+          <div class="text-end col-3">
+            <div class="login-buttons">
+              <a
+                href="/pages/login.html"
                 type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+                class="btn btn-outline-dark"
+                >Login</a
               >
-                <span class="material-symbols-outlined" id="menu"> menu </span>
-              </button>
-              <ul
-                class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 dropdown-menu hidden"
-                id="menu-list"
+              <a
+                href="/pages/login.html?page=register"
+                type="button"
+                class="btn btn-dark hidden"
+                id="register"
+                >Sign-up</a
               >
-                <li><a href="/index.html" class="nav-link px-2 text-primary dropdown-item">Home</a></li>
-                <li><a href="/pages/listings.html" class="nav-link px-2 text-secondary dropdown-item">Listings</a></li>
-                <li><a href="/pages/profile.html" class="nav-link px-2 text-secondary hidden dropdown-item">Profile</a></li>
-              </ul>
             </div>
-            <form class="col-4" role="search">
-              <input
-                type="search"
-                class="form-control form-control-dark text-bg-light"
-                placeholder="Search..."
-                aria-label="Search"
-                id="search"
-              />
-            </form>
-            <div class="text-end col-3">
-              <div class="login-buttons">
-                <a href="/pages/login.html" type="button" class="btn btn-outline-dark">Login</a>
-                <a href="/pages/login.html?page=register" type="button" class="btn btn-dark hidden" id = "register">Sign-up</a>
-              </div>
-              <div class="user hidden justify-content-end">
-                <div class="dropdown">
-                  <a class="dropdown-toggle dropdown-profile" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="" alt="Profile picture" class="hidden profile-picture rounded-circle md-w-50" />
-                  </a>
-                  <ul class="dropdown-menu py-0 profile-dropdown">
-                    <div class="rounded-top">
-                      <li>
-                        <span class="dropdown-item disabled text-dark">Credits:</span>
-                      </li>
-                      <li><span class="dropdown-item credits-container disabled text-dark"></span></li>
-                    </div>
-                    <li><span class="dropdown-item bg-success" id="log-out">Log Out</span></li>
-                  </ul>
-                </div>
+            <div class="user hidden justify-content-end">
+              <div class="dropdown">
+                <a
+                  class="dropdown-toggle dropdown-profile"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src=""
+                    alt="Profile picture"
+                    class="hidden profile-picture rounded-circle md-w-50"
+                  />
+                </a>
+                <ul class="dropdown-menu py-0 profile-dropdown">
+                  <div class="rounded-top">
+                    <li>
+                      <span class="dropdown-item disabled text-dark"
+                        >Credits:</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        class="dropdown-item credits-container disabled text-dark"
+                      ></span>
+                    </li>
+                  </div>
+                  <li>
+                    <span class="dropdown-item bg-success" id="log-out"
+                      >Log Out</span
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
     <main>
-        <div class="content-container specific-container ">
-            <div class="loader mx-auto my-5"></div>
-          </div>
-        <div class = "position-fixed bottom-1 start-84 ratio ratio-1x1 w-10 hidden new-listing-button" data-bs-toggle="tooltip" data-bs-title = "Create a new listing" data-bs-placement="left">
-          <button type = "button" class = "material-symbols-outlined btn text-center btn-info bg-dark text-white" data-bs-toggle="modal" data-bs-target="#new-listing">add</button>
-        </div>
-
+      <div class="content-container specific-container">
+        <div class="loader mx-auto my-5"></div>
+      </div>
+      <div
+        class="position-fixed bottom-1 start-84 ratio ratio-1x1 w-10 hidden new-listing-button"
+        data-bs-toggle="tooltip"
+        data-bs-title="Create a new listing"
+        data-bs-placement="left"
+      >
+        <button
+          type="button"
+          class="material-symbols-outlined btn text-center btn-info bg-dark text-white"
+          data-bs-toggle="modal"
+          data-bs-target="#new-listing"
+        >
+          add
+        </button>
+      </div>
     </main>
-    
-    <footer class="footer mt-auto py-5 col-md-12 justify-content-center my-5 pt-5 text-center text-small">
-        <p>&copy; 2023 BidBlitz. All rights reserved.</p>
+
+    <footer
+      class="footer mt-auto py-5 col-md-12 justify-content-center my-5 pt-5 text-center text-small"
+    >
+      <p>&copy; 2023 BidBlitz. All rights reserved.</p>
     </footer>
 
     <script type="module" src="../src/js/specific.mjs"></script>
-  
-</body>
+  </body>
 </html>
