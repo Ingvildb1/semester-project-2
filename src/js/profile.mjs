@@ -21,7 +21,7 @@ if(status){
 
   createListing();
   
-  //check if page should display logged in user's profile or another user's profile
+  //check if page should display logged in user's profile or another user
   const query = new URLSearchParams(document.location.search);
   let name = query.get("name")
   const edit = name ? false : true;

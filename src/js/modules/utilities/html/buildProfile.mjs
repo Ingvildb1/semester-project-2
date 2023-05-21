@@ -5,11 +5,11 @@ export async function buildProfile(data, edit){
   const container = document.querySelector(".profile-container");
 
   container.innerHTML = `
-  <div class = "w-50 mx-auto m-3 profile-image-container position-relative ">
-    <img src = "${data.avatar}" class = "rounded-circle w-100 profile-image" alt = "User's profile image" onerror = "this.src = '/img/error.jpg'">
-  </div>
   <div class = "w-100 text-center my-3">
     <h1>${data.name}</h1>
+  </div>
+  <div class = "w-50 mx-auto m-3 profile-image-container position-relative ">
+    <img src = "${data.avatar}" class = "rounded-circle w-100 profile-image" alt = "User's profile image" onerror = "this.src = '/img/error.jpg'">
   </div>
   <div class = "d-flex justify-content-between mx-4">
     <div class = "credits">

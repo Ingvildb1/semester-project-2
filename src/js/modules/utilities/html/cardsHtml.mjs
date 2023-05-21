@@ -25,7 +25,7 @@ export function createCards(data, counter, index){
             <p class = "card-text">Posted:</p>
             <p class = "card-text">${posted}</p>
             <p class = "card-text">Current highest bid:</p>
-            <p class = "card-text">${data[i].bids.length > 0 ? data[i].bids[data[i].bids.length -1]?.amount + " Credits" : "0 bids yet"}</p>
+            <p class = "card-text">${data[i].bids.length > 0 ? data[i].bids[data[i].bids.length -1]?.amount + " Credits" : "0 bids"}</p>
           </div>
         </a>
       </div>
