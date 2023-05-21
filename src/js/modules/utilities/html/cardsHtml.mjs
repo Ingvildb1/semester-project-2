@@ -20,8 +20,8 @@ export function createCards(data, counter, index){
       <div class = "card m-3 rounded w-50 mx-auto">
         <img src = "${data[i].media[0] || ''}" class = "image-height-fix" alt = "product image" onerror = "this.src = '../img/error.jpg'">
         <a href = "spesific.html?id=${data[i].id}" class = "unset">
-          <div class = "card-img-overlay overlay text-light" data-id = "${data[i].id}">
-            <h2 class = "card-title">${data[i].title}</h2>
+          <div class = "text-dark bg-info" data-id = "${data[i].id}">
+            <h2 class = "card-title text-primary">${data[i].title}</h2>
             <p class = "card-text">Posted:</p>
             <p class = "card-text">${posted}</p>
             <p class = "card-text">Current highest bid:</p>
