@@ -26,7 +26,7 @@ export async function buildProfile(data, edit){
   if(edit){
     const profileImageContainer = document.querySelector(".profile-image-container");
 
-    profileImageContainer.innerHTML += `<button type = "button"class = "btn edit-btn bg-dark text-center text-white position-absolute bottom-0 end-10" data-bs-toggle="modal" data-bs-target="#modal"><span class="material-symbols-outlined">
+    profileImageContainer.innerHTML += `<button type = "button"class = "btn edit-btn bg-success text-center text-dark position-absolute bottom-0 end-10" data-bs-toggle="modal" data-bs-target="#modal"><span class="material-symbols-outlined">
     Edit Avatar</button>
     <div class="modal fade" id="modal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
