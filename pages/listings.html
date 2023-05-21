@@ -34,7 +34,7 @@
                 <li><a href="/pages/profile.html" class="nav-link px-2 text-secondary hidden dropdown-item">Profile</a></li>
               </ul>
             </div>
-            <form class="col-6" role="search">
+            <form class="col-4" role="search">
               <input
                 type="search"
                 class="form-control form-control-dark text-bg-light"
@@ -46,7 +46,7 @@
             <div class="text-end col-3">
               <div class="login-buttons">
                 <a href="/pages/login.html" type="button" class="btn btn-outline-dark">Login</a>
-                <a href="/pages/login.html?page=register" type="button" class="btn btn-danger hidden" id = "register">Sign-up</a>
+                <a href="/pages/login.html?page=register" type="button" class="btn btn-dark hidden" id = "register">Sign-up</a>
               </div>
               <div class="user hidden justify-content-end">
                 <div class="dropdown">
@@ -54,13 +54,13 @@
                     <img src="" alt="Profile picture" class="hidden profile-picture rounded-circle md-w-50" />
                   </a>
                   <ul class="dropdown-menu py-0 profile-dropdown">
-                    <div class="bg-primary rounded-top">
+                    <div class="rounded-top">
                       <li>
                         <span class="dropdown-item disabled text-dark">Credits:</span>
                       </li>
                       <li><span class="dropdown-item credits-container disabled text-dark"></span></li>
                     </div>
-                    <li><span class="dropdown-item" id="log-out">Log Out</span></li>
+                    <li><span class="dropdown-item bg-success" id="log-out">Log Out</span></li>
                   </ul>
                 </div>
               </div>
@@ -69,13 +69,14 @@
         </div>
       </header>
 
+      <h1 class="mx-auto d-flex justify-content-center header-listings">Items to bid on right now</h1>
     <main class = "position-relative">
-        <div class = "content-container container d-flex flex-wrap justify-content-center">
+        <div class = "content-container container d-flex row flex-wrap justify-content-center">
           </div>
-      </main>
+   
 
-      <div class = "position-fixed bottom-1 start-84 ratio ratio-1x1 w-30 hidden new-listing-button" data-bs-toggle="tooltip" data-bs-title = "Create a new listing" data-bs-placement="left">
-        <button type = "button" class = "material-symbols-outlined btn text-center btn-info bg-dark text-white" data-bs-toggle="modal" data-bs-target="#new-listing">add</button>
+      <div class = "position-fixed ratio ratio-1x1 w-30 hidden new-listing-button" data-bs-toggle="tooltip" data-bs-title = "Create a new listing" data-bs-placement="left">
+        <button type = "button" class = "material-symbols-outlined btn text-center btn-info bg-dark text-white" data-bs-toggle="modal" data-bs-target="#new-listing">Add Listing</button>
       </div>
       <div class="modal fade" id="new-listing" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -109,7 +110,7 @@
             </div>
           </div>
         </div>
-           
+    </main>
     
     <footer class="footer mt-auto py-5 col-md-12 justify-content-center my-5 pt-5 text-center text-small">
         <p>&copy; 2023 BidBlitz. All rights reserved.</p>

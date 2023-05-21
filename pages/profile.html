@@ -34,7 +34,7 @@
                 <li><a href="/pages/profile.html" class="nav-link px-2 text-secondary hidden dropdown-item">Profile</a></li>
               </ul>
             </div>
-            <form class="col-6" role="search">
+            <form class="col-4" role="search">
               <input
                 type="search"
                 class="form-control form-control-dark text-bg-light"
@@ -46,21 +46,21 @@
             <div class="text-end col-3">
               <div class="login-buttons">
                 <a href="/pages/login.html" type="button" class="btn btn-outline-dark">Login</a>
-                <a href="/pages/login.html?page=register" type="button" class="btn btn-danger hidden" id = "register">Sign-up</a>
+                <a href="/pages/login.html?page=register" type="button" class="btn btn-dark hidden" id = "register">Sign-up</a>
               </div>
               <div class="user hidden justify-content-end">
                 <div class="dropdown">
                   <a class="dropdown-toggle dropdown-profile" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="" alt="Profile picture" class="hidden profile-picture rounded-circle md-w-50" />
+                    <img src="" alt="Profile picture" class="hidden profile-picture rounded-circle md-w-10" />
                   </a>
                   <ul class="dropdown-menu py-0 profile-dropdown">
-                    <div class="bg-primary rounded-top">
+                    <div class="rounded-top">
                       <li>
                         <span class="dropdown-item disabled text-dark">Credits:</span>
                       </li>
                       <li><span class="dropdown-item credits-container disabled text-dark"></span></li>
                     </div>
-                    <li><span class="dropdown-item" id="log-out">Log Out</span></li>
+                    <li><span class="dropdown-item bg-success" id="log-out">Log Out</span></li>
                   </ul>
                 </div>
               </div>
@@ -68,53 +68,55 @@
           </div>
         </div>
       </header>
-
+      <div class = "position-fixed bottom-1 start-84 ratio ratio-1x1 w-10 hidden new-listing-button" data-bs-toggle="tooltip" data-bs-title = "Create a new listing" data-bs-placement="left">
+        <button type = "button" class = "material-symbols-outlined btn text-center btn-info bg-dark text-white" data-bs-toggle="modal" data-bs-target="#new-listing">Add Listing</button>
+      </div>
+      <div class="modal fade" id="new-listing" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modal-title">Create a new listing</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class = "new-listing-form">
+                <label for = "title" class = "form-label">Title</label>
+                <input id = "title" class = "form-control" type = "text">
+                <div id="title-status-message" class="form-text fs-5 hidden"></div>
+  
+                <label for = "description" class = "form-label">Description</label>
+                <textarea id = "description" class = "form-control" type = "text"></textarea>
+  
+                <label for = "tags" class = "form-label">Tags(Separate with comma example: "Art, Cars, Bikes"):</label>
+                <input id = "tags" class = "form-control" type = "text">
+  
+                <label for = "media" class = "form-label">Images(Separate with comma example: "url1, url2, url3"):</label>
+                <input id = "media" class = "form-control" type = "url">
+  
+                <label for = "end-date" class = "form-label">Ending date</label>
+                <input id = "end-date" class = "form-control" type = "datetime-local">
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" id = "new-listing-button" class="btn btn-primary">Post listing</button>
+            </div>
+          </div>
+        </div>
+      </div>
     <main>
         <div class = "profile-container">
             <div class="loader my-5 mx-auto"></div>
           </div>
           <div class="profile-divider status-container">
             <hr>
+            
+            <h2 class="mx-auto d-flex justify-content-center">Uploaded listings</h2>
           </div>
           <div class = "content-container profile-cards d-flex flex-wrap justify-content-center">
           </div>
-        </main>
-        <div class = "position-fixed bottom-1 start-84 ratio ratio-1x1 w-10 hidden new-listing-button" data-bs-toggle="tooltip" data-bs-title = "Create a new listing" data-bs-placement="left">
-          <button type = "button" class = "material-symbols-outlined btn text-center btn-info bg-dark text-white" data-bs-toggle="modal" data-bs-target="#new-listing">Add Listing</button>
-        </div>
-        <div class="modal fade" id="new-listing" tabindex="-1" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="modal-title">Create a new listing</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <form class = "new-listing-form">
-                  <label for = "title" class = "form-label">Title</label>
-                  <input id = "title" class = "form-control" type = "text">
-                  <div id="title-status-message" class="form-text fs-5 hidden"></div>
-    
-                  <label for = "description" class = "form-label">Description</label>
-                  <textarea id = "description" class = "form-control" type = "text"></textarea>
-    
-                  <label for = "tags" class = "form-label">Tags(Separate with comma example: "Art, Cars, Bikes"):</label>
-                  <input id = "tags" class = "form-control" type = "text">
-    
-                  <label for = "media" class = "form-label">Images(Separate with comma example: "url1, url2, url3"):</label>
-                  <input id = "media" class = "form-control" type = "url">
-    
-                  <label for = "end-date" class = "form-label">Ending date</label>
-                  <input id = "end-date" class = "form-control" type = "datetime-local">
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" id = "new-listing-button" class="btn btn-primary">Post listing</button>
-              </div>
-            </div>
-          </div>
-        </div>
+       
+        
 
     </main>
     

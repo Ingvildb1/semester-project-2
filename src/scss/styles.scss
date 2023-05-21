@@ -52,6 +52,9 @@ body {
     border: 1px solid black;
     background-color: #f2f2f2;
   }
+  .log-out:hover {
+    text-decoration: underline;
+  }
   
 
 .text-center {
@@ -207,6 +210,8 @@ body {
     background-color: #c98f703f;
   }
 
+ 
+
   @include media-breakpoint-up(lg){
     .listing{
       min-width: 30%;
@@ -230,5 +235,17 @@ body {
     .new-listing-button{
       width: 5%;
       left: 79%;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .form-control {
+      width: 50%;
+    }
+    #menu {
+      padding: 0px;
+    }
+    h1{
+      font-size: 30px;
     }
   }
