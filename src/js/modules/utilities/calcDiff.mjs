@@ -1,3 +1,10 @@
+/**
+ * Calculates the time difference between the current time and a given time value.
+ * @param {string|number|Date} timeValue - The time value to calculate the difference from.
+ * @returns {string} The formatted time difference in the format: "xD xH xM".
+ *                   If the time is in the past, it returns "Ended".
+ */
+
 export function timeDiff(timeValue) {
     const today = Date.parse(new Date());
     const parsed = Date.parse(timeValue);

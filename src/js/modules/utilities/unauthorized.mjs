@@ -1,3 +1,8 @@
+/**
+ * Checks the authentication status and displays appropriate content based on the status.
+ * @param {boolean} status - The authentication status (true if authenticated, false otherwise).
+ */
+
 export function auth(status){
     const container = document.querySelector(".status-container");
   

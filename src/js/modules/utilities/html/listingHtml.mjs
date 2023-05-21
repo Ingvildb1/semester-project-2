@@ -1,5 +1,12 @@
 import { timeDiff } from "../calcDiff.mjs";
 
+/**
+ * Generates HTML for displaying listings based on the provided data.
+ * @param {Array<Object>} data - The data used to generate the listing HTML.
+ * @param {string} container - The container selector for displaying the listings.
+ * @param {string} type - The type of listing ("all" or other).
+ */
+
 export function listingHtml(data, container, type) {
     let end;
   

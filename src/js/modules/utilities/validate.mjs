@@ -1,3 +1,10 @@
+/**
+ * Validates the provided data based on the specified type.
+ * @param {Object} data - The data to validate.
+ * @param {string} type - The type of validation to perform ("register" or "login").
+ * @returns {boolean} True if the data is valid, false otherwise.
+ */
+
 export default function validate(data, type) {
     
     let valid = 0;

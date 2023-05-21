@@ -1,4 +1,10 @@
 import { searchFilter } from "../filters/searchFilter.mjs";
+
+/**
+ * Performs a search based on the provided data.
+ * @param {Array<Object>} data - The data to perform the search on.
+ */
+
 export function search(data) {
   const form = document.querySelector("form");
   const input = document.querySelector("#search");

@@ -1,3 +1,10 @@
+/**
+ * Creates and displays cards based on the provided data.
+ * @param {Array<Object>} data - The data used to create the cards.
+ * @param {number} [counter] - The counter value to limit the number of cards displayed.
+ * @param {number} [index] - The starting index for creating cards.
+ */
+
 export function createCards(data, counter, index){
     const container = document.querySelector(".content-container");
     let count;

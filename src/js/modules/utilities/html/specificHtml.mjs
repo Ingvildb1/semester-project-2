@@ -1,4 +1,11 @@
 import { timeDiff } from "../calcDiff.mjs";
+
+/**
+ * Generates HTML for displaying specific listing information based on the provided data.
+ * @param {Object} data - The data used to generate the specific listing HTML.
+ * @returns {boolean} True if the listing is still active, false if it has ended.
+ */
+
 export function specificHtml(data) {
     const container = document.querySelector(".content-container");
   

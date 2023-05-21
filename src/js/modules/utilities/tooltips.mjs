@@ -1,3 +1,7 @@
+/**
+ * Initializes tooltips and manages tooltip behavior.
+ */
+
 export function tooltip(){
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

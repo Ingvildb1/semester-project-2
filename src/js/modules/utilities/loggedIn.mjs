@@ -1,3 +1,9 @@
+/**
+ * Checks if the user is logged in and makes necessary adjustments to the UI.
+ * @param {boolean} check - If true, only checks if the user is logged in without making UI adjustments.
+ * @returns {boolean} True if the user is logged in, false otherwise.
+ */
+
 export function loggedIn(check) {
     if (window.localStorage.getItem("token")) {
       if(check){
