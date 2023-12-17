@@ -1,6 +1,8 @@
 # Semester project 2
 Semester project 2.
 
+![image](img/semester-project-2-img.png)
+
 I have some issues to get the site on the hosted application, so please clone this to see the whole project.
 
 ## About this project
